@@ -54,6 +54,25 @@ class Testing {
 		 assertEquals(content, result);
 	    
 	 }//end of testReadFromFile
+	 
+	 
+	   @Test
+	    void testAppendToFile() throws IOException {
+	        
+		   String initialContent = "Initial content.";
+	        
+	        
+	        String appendContent = " Appended content.";
+	        
+	        FileIO.writeToFile(TEST_FILE, initialContent);
+	        
+	        FileIO.appendToFile(TEST_FILE, appendContent);
+	        
+	        String result = FileIO.readFromFile(TEST_FILE);
+	        
+	        assertEquals(initialContent + appendContent, result);
+	   
+	   }//end of testAppendToFile
 	
 }//end of Testing class 
 
