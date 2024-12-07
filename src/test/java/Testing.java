@@ -41,5 +41,19 @@ class Testing {
     
 	}//end of testWriteToFile
 	
+	
+	 @Test
+	    void testReadFromFile() throws IOException {
+	        
+		 String content = "Test content";
+	        
+		 FileIO.writeToFile(TEST_FILE, content);
+	        
+		 String result = FileIO.readFromFile(TEST_FILE);
+	        
+		 assertEquals(content, result);
+	    
+	 }//end of testReadFromFile
+	
 }//end of Testing class 
 
