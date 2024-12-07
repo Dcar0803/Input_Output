@@ -56,6 +56,17 @@ public class FileIO {
 
 	 
 	 
+	 /**
+	     * Appends the given content to a file with the specified filename.
+	     * If the file does not exist, it creates the file and writes the content.
+	     *
+	     * @param filename the name of the file to append to
+	     * @param content  the content to append to the file
+	     * @throws IOException if an I/O error occurs
+	     */
+	 
+	 
+	 
 	 public static void appendToFile(String filename, String content) throws IOException {
 	        
 		 try (FileWriter writer = new FileWriter(filename, true)) {
