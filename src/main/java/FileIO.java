@@ -54,4 +54,18 @@ public class FileIO {
 	        
 	    }//end of readFromFile
 
+	 
+	 
+	 public static void appendToFile(String filename, String content) throws IOException {
+	        
+		 try (FileWriter writer = new FileWriter(filename, true)) {
+	           
+			 writer.write(content);
+	        
+		 }//end of try 
+		 
+	    }//end of appendToFile 
+	 
+	 
+
 }//end of FileIO class 
