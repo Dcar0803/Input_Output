@@ -20,5 +20,29 @@ public class FileIO {
 	}//end of writeToFile method 
 	
 	
+	 public static String readFromFile(String filename) throws IOException {
+	        
+		 StringBuilder content = new StringBuilder();
+	       
+	        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+	            
+	        	String line;
+	            
+	            while ((line = reader.readLine()) != null) {
+	                
+	            	content.append(line).append(System.lineSeparator());
+	            }//end of while loop 
+	        
+	        }//end of try 
+	     
+	        if (content.length() > 0) {
+	            
+	        	content.setLength(content.length() - System.lineSeparator().length());
+	        
+	        }//end of if statement
+	        
+	        return content.toString();
+	        
+	    }//end of readFromFile
 
 }//end of FileIO class 
