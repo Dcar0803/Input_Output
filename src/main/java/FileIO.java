@@ -20,6 +20,15 @@ public class FileIO {
 	}//end of writeToFile method 
 	
 	
+	/**
+     * Reads the content of the specified file and returns it as a string.
+     *
+     * @param filename the name of the file to read from
+     * @return the content of the file
+     * @throws IOException if an I/O error occurs
+     */
+	
+	
 	 public static String readFromFile(String filename) throws IOException {
 	        
 		 StringBuilder content = new StringBuilder();
